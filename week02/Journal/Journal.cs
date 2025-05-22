@@ -21,29 +21,38 @@ public class Journal
     }
     public void WriteDoc()
     {
-        Console.Write("\nWrite the name of the document: ");
-        string filename = Console.ReadLine();
+        Console.Write("\nWrite the name of the document without extension (like .txt): ");
+        string input = Console.ReadLine();
+        string filename = input+".txt";
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
             foreach (Entry i in entries)
-        {
-            outputFile.WriteLine(i._date);
-            outputFile.WriteLine(i._promptText);
-            outputFile.WriteLine(i._entryText);
+            {
+                outputFile.WriteLine(i._date);
+                outputFile.WriteLine(i._promptText);
+                outputFile.WriteLine(i._entryText);
+            }
         }
-            
+        string filecsv= input +".csv";
+        using (StreamWriter outputFileCsv = new StreamWriter(filecsv))
+        {
+            foreach (Entry o in entries)
+            {
+                outputFileCsv.WriteLine($"{o._date},{o._promptText},{o._entryText}");
+            }
         }
     }
     public void LoadDoc()
     {
-        Console.Write("\nWrite the name of the document: ");
-        string filename = Console.ReadLine();
+        Console.Write("\nWrite the name of the document without extension (like .txt): ");
+        string input = Console.ReadLine();
+        string filename = input+".txt";
         if (!File.Exists(filename))
         {
         Console.WriteLine("File not found.");
         return;
         }
-        string[] lines = System.IO.File.ReadAllLines(filename);
+       string[] lines = System.IO.File.ReadAllLines(filename); 
         for (int i = 0; i < lines.Length; i += 3)
         {
             Entry entry = new Entry();

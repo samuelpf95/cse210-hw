@@ -43,3 +43,5 @@ class Program
         return ans;
     }
 }
+//Added a verification if the user enters a file name that doesn't exists
+//The Journal also creates a CSV file with the entries when saving

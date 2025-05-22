@@ -27,6 +27,9 @@ class Program
             {
                 journal.WriteDoc();
             }
+            else{
+                Console.WriteLine("Please enter a valid option")
+            }
         Console.WriteLine("\nWhat else do you want to do?");
         ans = Menu();
         }

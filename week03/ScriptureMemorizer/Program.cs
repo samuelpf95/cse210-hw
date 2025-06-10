@@ -46,4 +46,4 @@ class Program
 }
 //Included 3 scriptures wich are randomly selected at the start of the program
 //When every word is hidden, the instructions change according to the behavior of the program
-//It supports "quit", "Quit", and "QUIT" as valid answer 
+//It supports "quit", "Quit", and "QUIT" as valid answer

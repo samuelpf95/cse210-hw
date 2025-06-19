@@ -1,0 +1,4 @@
+0
+SimpleGoal:Simplegoalxd,Simplegoalexplanation,50,False
+EternalGoal:Eternalgoalxd,EternalGoalExplanation,75
+ChecklistGoal:Checklistgoalxd,ChecklistgoalExplanation,5,0,10,650
